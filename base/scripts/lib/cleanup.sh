@@ -5,12 +5,13 @@ set -e
 
 apt-get autoremove -y
 
-apt-get clean
+apt-get clean -y
+apt-get autoclean -y
 
 rm -rf /var/lib/apt/lists/* || true
 
 # Clean out docs
-rm -rf /usr/share/doc /usr/share/doc-base /usr/share/man /usr/share/locale /usr/share/zoneinfo || true
+rm -rf /usr/share/doc /usr/share/doc-base /usr/share/man /usr/share/locale /usr/share/zoneinfo /var/cache/debconf/*-old || true
 
 # Clean out package management dirs
 rm -rf /var/lib/cache /var/lib/log || true

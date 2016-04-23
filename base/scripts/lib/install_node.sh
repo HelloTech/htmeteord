@@ -18,4 +18,3 @@ ln -sf /opt/nodejs/bin/node /usr/bin/node
 /opt/nodejs/bin/npm install --prefix /opt/nodejs -g npm@${NPM_VERSION}
 ln -sf /opt/nodejs/bin/npm /usr/bin/npm
 # ln -sf /opt/nodejs/bin/npm /usr/bin/npm
-
