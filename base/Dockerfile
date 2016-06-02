@@ -1,4 +1,5 @@
-FROM debian:wheezy
+# FROM debian:wheezy
+FROM node:0.10.41-slim
 MAINTAINER HelloTech
 
 # RUN set -ex \
