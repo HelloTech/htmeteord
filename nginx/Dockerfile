@@ -1,3 +1,2 @@
 FROM nginx
-COPY ./htpasswd.users /etc/nginx/htpasswd.users
-COPY ./logs.conf /etc/nginx/conf.d/logs.conf
+COPY ./gka.to.conf /etc/nginx/conf.d/gka.to.conf
