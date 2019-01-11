@@ -24,7 +24,7 @@ gem 'htmlentities'
 
 # Added to integrate Segment.io to ease adding multiple tracking tags
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
-
+   
 gem 'cache_digests'
 
 gem 'nio4r', '~> 1.1.1'
@@ -55,6 +55,7 @@ group :development, :test do
   gem 'quiet_assets'
   # Debugging
   gem 'pry'
+  gem 'active_record_query_trace'
 end
 
 gem 'google_visualr'
@@ -278,7 +279,9 @@ gem 'sidekiq', '~> 4.2.7'
 # gem 'grpc-tools', '~> 1.1.0'
 gem 'bootsnap', git: 'git://github.com/TheRusskiy/bootsnap.git', branch: 'feature/active-support-3'
 gem 'gon'
-
+gem 'pundit'
+gem 'json_dumper', '~> 0.4.0'
+gem 'money-rails', '~> 1.9.0'
 
 # pdf manipulation
 gem 'prawn'
@@ -286,3 +289,8 @@ gem 'pdf-reader'
 gem 'combine_pdf'
 
 gem 'faraday_middleware'
+gem 'rubyzip', '~> 1.2.0'
+gem 'bulk_insert', git: 'https://github.com/TheRusskiy/bulk_insert.git', branch: 'master'
+
+# EDI gems
+gem 'stupidedi'

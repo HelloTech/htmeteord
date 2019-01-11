@@ -14,6 +14,14 @@ GIT
       countries (~> 1.2.0)
       sort_alphabetical (~> 1.0)
 
+GIT
+  remote: https://github.com/TheRusskiy/bulk_insert.git
+  revision: a1710fa91f6679ded68df505b276286e2d450e5b
+  branch: master
+  specs:
+    bulk_insert (1.6.0)
+      activerecord (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,6 +39,7 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_record_query_trace (1.5.4)
     activemodel (3.2.22.4)
       activesupport (= 3.2.22.4)
       builder (~> 3.0.0)
@@ -93,6 +102,7 @@ GEM
       actionpack (>= 3.2)
       thread_safe
     cancan (1.6.10)
+    cantor (1.2.1)
     capistrano (3.5.0)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -331,6 +341,8 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (1.8.3)
+    json_dumper (0.4.0)
+      activerecord
     json_pure (1.8.3)
     jwt (1.5.1)
     launchy (2.4.3)
@@ -372,8 +384,17 @@ GEM
     mobile-fu (1.3.1)
       rack-mobile-detect
       rails
+    monetize (1.7.0)
+      money (~> 6.9)
+    money (6.9.0)
+      i18n (>= 0.6.4, < 0.9)
+    money-rails (1.9.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.7.0)
+      money (~> 6.9.0)
+      railties (>= 3.0)
     msgpack (1.1.0)
-    multi_json (1.12.1)
+    multi_json (1.13.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.17)
@@ -473,6 +494,8 @@ GEM
     puma_worker_killer (0.1.0)
       get_process_mem (~> 0.2)
       puma (>= 2.7, < 4)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     pusher (0.17.0)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -666,6 +689,9 @@ GEM
       activemodel (~> 3.0)
       activesupport (~> 3.0)
       railties (~> 3.0)
+    stupidedi (1.2.17)
+      cantor (~> 1.2.1)
+      term-ansicolor (~> 1.3)
     sunspot (2.2.5)
       pr_geohash (~> 1.0)
       rsolr (~> 1.1.1)
@@ -674,6 +700,8 @@ GEM
       rails (>= 3)
       sunspot (= 2.2.5)
     sunspot_solr (2.2.5)
+    term-ansicolor (1.6.0)
+      tins (~> 1.0)
     test-unit (3.1.5)
       power_assert
     therubyracer (0.12.2)
@@ -684,6 +712,7 @@ GEM
     tilt (1.4.1)
     timers (1.1.0)
     timezone (0.3.1)
+    tins (1.16.3)
     traceroute (0.5.0)
       rails (>= 3.0.0)
     transaction_isolation (1.0.3)
@@ -747,6 +776,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_record_query_trace
   analytics-ruby (~> 2.0.0)
   ancestry
   awesome_print
@@ -756,6 +786,7 @@ DEPENDENCIES
   brakeman
   browser (~> 0.8.0)
   bugsnag
+  bulk_insert!
   bullet
   byebug
   cache_digests
@@ -801,6 +832,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
+  json_dumper (~> 0.4.0)
   jwt
   launchy
   linkedin
@@ -814,6 +846,7 @@ DEPENDENCIES
   mina-multistage
   mina-puma
   mobile-fu
+  money-rails (~> 1.9.0)
   mysql2 (= 0.3.17)
   net-ssh
   newrelic_rpm
@@ -838,6 +871,7 @@ DEPENDENCIES
   pry
   puma
   puma_worker_killer
+  pundit
   pusher
   quiet_assets
   rack-mini-profiler
@@ -856,6 +890,7 @@ DEPENDENCIES
   rspec-rails (~> 2.14.1)
   rubocop (~> 0.45.0)
   rubycritic (~> 3.1.0)
+  rubyzip (~> 1.2.0)
   sanitize
   sass-rails (>= 3.2)
   savon
@@ -873,6 +908,7 @@ DEPENDENCIES
   stackprof (~> 0.2.7)
   stripe
   strong_parameters
+  stupidedi
   sunspot_rails
   sunspot_solr
   test-unit (~> 3.0)
@@ -894,4 +930,4 @@ DEPENDENCIES
   zeroclipboard-rails
 
 BUNDLED WITH
-   1.16.0
+   1.16.3
